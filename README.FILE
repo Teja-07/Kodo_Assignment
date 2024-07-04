@@ -1,22 +1,21 @@
-Hi, I'm Teja Chinitha. I graduated from Vellore Institute of Technology in 2024 with a Bachelor of Technology degree
-in Computer Science. Alongside this project, I have 1.2 years of experience in the software domain and have completed 
-3-4 internships in software engineering and mobile application development. Here are a few of my coding profiles 
-and project 
-GitHub Link:-https://github.com/Teja-07
-Leetcode Link:-https://leetcode.com/Teja_07/
-GeeksforGeek Link:-https://auth.geeksforgeeks.org/user/chinthateja07
-HackerRank Link:-https://www.hackerrank.com/profile/chinthateja07
+Sure, here's how you can structure the information in a dropdown format for your README file:
 
-Project Description:-
-This project involves the implementation of a backend system for an Enterprise Form Builder application. 
-The application allows administrators to define and publish forms that employees can fill out for various 
-purposes such as leave applications, surveys, and more. Key features of the form structure include:
--->Form Title: Easily identifiable by administrators and employees.
--->Form Fields: Core components for data collection, configurable with properties like labels and mandatory status.
--->Field Types: Supports basic types like Text and Number with configurable validations such as maximum length, 
-              allowed characters, and numerical constraints.
- Folder Structure: 
- src
+<details>
+<summary>Project Description</summary>
+
+This project involves the implementation of a backend system for an Enterprise Form Builder application. The application allows administrators to define and publish forms that employees can fill out for various purposes such as leave applications, surveys, and more. Key features of the form structure include:
+
+- **Form Title:** Easily identifiable by administrators and employees.
+- **Form Fields:** Core components for data collection, configurable with properties like labels and mandatory status.
+- **Field Types:** Supports basic types like Text and Number with configurable validations such as maximum length, allowed characters, and numerical constraints.
+
+</details>
+
+<details>
+<summary>Folder Structure</summary>
+
+```
+src
 ├── main
 │   ├── java
 │   │   └── com
@@ -54,63 +53,55 @@ purposes such as leave applications, surveys, and more. Key features of the form
                         ├── FormControllerTests.java
                         ├── FieldControllerTests.java
                         └── ValidationControllerTests.java
- 
-Technologies Used:
+```
 
-Java and Spring Boot: The application is built entirely using Java with Spring Boot, facilitating form creation, publication, and integration. 
-                      Utilizing regex functions has significantly sped up form creation and updates by 30%, enhancing user and admin efficiency.
+</details>
 
-RESTful Architecture and JSON Data Format: JSON format is employed for seamless integration and data handling. This architecture allows administrators 
-                                            to add forms and associated fields efficiently using APIs that maintain one-to-one relationships by passing form IDs.
+<details>
+<summary>Technologies Used</summary>
 
-Postman: Postman is utilized for verifying and validating API requests, ensuring accurate data transmission and robust API development.
+- **Java and Spring Boot:** The application is built entirely using Java with Spring Boot, facilitating form creation, publication, and integration.
+- **RESTful Architecture and JSON Data Format:** JSON format is employed for seamless integration and data handling.
+- **Postman:** Used for verifying and validating API requests.
+- **MySQL Database:** Stores user and admin data in a structured manner.
 
-MySQL Database: User and admin data is stored in MySQL Workbench, organized in tabular format. This database setup ensures data integrity and reliability for the 
-                form management system.
+</details>
 
+<details>
+<summary>Implementation Approach</summary>
 
-Implementation Approach
+1. **Project Setup:**
+   - Language and Framework: Java and Spring Boot.
+   - Database Setup: MySQL for data storage.
 
-1)Project Setup:
-Language and Framework:We have Choose Java for its conciseness and robustness in building backend applications.
-                        Use Spring Boot for its ease of setting up RESTful APIs and dependency management.
-2)Database Setup:-Used MySQL for storing form and field data. Set up a local instance for development purposes.
-                   Define tables for Form and Field entities with appropriate relationships.
-3)Entity Design:
--->FormEntity: Represent a form with attributes like id, title, and a collection of FieldEntity.
--->FieldEntity: Represent a form field with properties such as id, label, isRequired, type, and specific attributes
-                 based on field type (e.g.name,EmpId).
-                 
-                 
-4)Repository Layer:
-Create Spring Data JPA repositories (FormRepository and FieldRepository) for CRUD operations on FormEntity and FieldEntity.
-Implement custom query methods for specific operations like fetching forms by title (findByTitle) or finding fields by form ID (findByFormId).
+2. **Entity Design:** 
+   - FormEntity and FieldEntity to represent forms and fields.
 
-5)Service Layer:
-Implement service classes (FormService and FieldService) to handle business logic.
+3. **Repository Layer:** 
+   - Spring Data JPA repositories for CRUD operations.
 
-FormService:Create methods for form creation (createForm), fetching forms (getAllForms, getFormById), and form validation (validateForm).
-FieldService:Implement methods for creating fields (createField), fetching fields by form ID (getFieldsByFormId), and field validation (validateField).
+4. **Service Layer:** 
+   - Business logic handling in FormService and FieldService.
 
-6)Controller Layer:
-Develop REST controllers (FormController and FieldController) to handle HTTP requests and interact with services.
+5. **Controller Layer:** 
+   - REST controllers for handling HTTP requests.
 
-FormController:Define endpoints for form creation (POST /forms), fetching forms (GET /forms), and form validation (POST /forms/{formId}/validate).
-FieldController:Implement endpoints for adding fields to a form (POST /forms/{formId}/fields), fetching fields (GET /forms/{formId}/fields), and 
-                 field validation (POST /fields/{fieldId}/validate).
-                 
-7)Validation Mechanism:
-Implement server-side validation in service methods using Java validation libraries or custom logic.
-Validate mandatory fields, data formats (e.g., text length, numeric range), and handle errors gracefully.
+6. **Validation Mechanism:** 
+   - Server-side validation for form fields.
 
-8)Unit Tests: 
-Write JUnit tests to validate service layer methods and business logic.
-Integration Tests: Test API endpoints using tools like Postman or Spring MVC Test framework to ensure 
-                    correct request and response handling.
-                    
-9)Documentation and Deployment:
-README: Include detailed instructions for setting up the development environment, running the application, and executing tests.
-Deployment: Prepare the application for deployment on Linux or Mac OS environments, ensuring all dependencies and configurations are in place.
+7. **Testing:** 
+   - Unit and integration tests using JUnit and Postman.
 
-TESTING AND CODEBASE PHOTOS LINK:-
-https://docs.google.com/document/d/1b6NNgQfvs2AhsrR-f8FydbqRV9-JX8VS/edit?usp=sharing&ouid=102370267835915001611&rtpof=true&sd=true
+8. **Documentation and Deployment:**
+   - README file includes setup instructions and deployment details.
+
+</details>
+
+<details>
+<summary>Testing and Codebase Photos Link</summary>
+
+[Link to Testing and Codebase Photos](https://docs.google.com/document/d/1b6NNgQfvs2AhsrR-f8FydbqRV9-JX8VS/edit?usp=sharing&ouid=102370267835915001611&rtpof=true&sd=true)
+
+</details>
+
+You can copy and paste this into your README file, and it will display as collapsible sections in Markdown format. Let me know if there's anything else you need!
